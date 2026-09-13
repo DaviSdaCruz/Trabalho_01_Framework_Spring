@@ -1,3 +1,1 @@
-DAVI SZEREMETA DA CRUZ
-VITOR EDUARDO SILVA
-LUCAS EMANUEL GAVET MAICHAK
+Davi Szeremeta da Cruz, Lucas Emanuel Gavet Maichak e Vitor Eduardo Silva
