@@ -7,6 +7,9 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Lob;
 import jakarta.persistence.Table;
+import jakarta.persistence.OneToMany;
+import java.util.List;
+import java.util.ArrayList;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -40,5 +43,6 @@ public class Autor {
 
     // PARTE 2 DO PROJETO
     
-    // private List<Artigo> artigos;
+    @OneToMany(mappedBy = "autor")
+    private List<Artigo> artigos = new ArrayList<>();
 }
