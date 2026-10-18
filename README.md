@@ -4,7 +4,9 @@ Davi Szeremeta da Cruz, Lucas Emanuel Gavet Maichak e Vitor Eduardo Silva
 
 # 📚 Projeto Editora API (Spring Boot)
 
-Este é um projeto educacional desenvolvido por alunos de Engenharia de Software, como parte da disciplina de Desenvolvimento Web. Trata-se de uma aplicação backend construída com Spring Boot, utilizando a arquitetura em camadas (Controller, Service, Repository e Entity), que disponibiliza uma API RESTful para o gerenciamento de autores e artigos de uma editora, permitindo cadastrar, consultar e excluir autores, bem como cadastrar, consultar, atualizar e excluir artigos. O projeto foi desenvolvido com base nesse repositório: https://github.com/ferrasa/dw.git, utilizando como referência o diretório "editora_aprimorado".
+Este é um projeto educacional desenvolvido por alunos de Engenharia de Software, como parte da disciplina de Desenvolvimento Web. 
+Trata-se de uma aplicação backend construída com Spring Boot, utilizando a arquitetura em camadas (Controller, Service, Repository e Entity), que disponibiliza uma API RESTful para o gerenciamento de autores e artigos de uma editora, permitindo cadastrar, consultar e excluir autores, bem como cadastrar, consultar, atualizar e excluir artigos. 
+O projeto foi desenvolvido com base nesse repositório: https://github.com/ferrasa/dw.git, utilizando como referência o diretório "editora_aprimorado".
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -42,7 +44,7 @@ spring.jpa.hibernate.ddl-auto=update
 
 ## 📍 Endpoints da API
 
-A API responde no Base Path `/editora/api/artigos` e `/editora/api/autores` e permite requisições Cross-Origin (CORS habilitado globalmente).
+A API responde nos Base Path `/editora/api/artigos` e `/editora/api/autores` e permite requisições Cross-Origin (CORS habilitado globalmente).
 
 | Método HTTP | Endpoint | Descrição |
 | :--- | :--- | :--- |
