@@ -20,7 +20,7 @@ O projeto foi desenvolvido com base nesse repositório: https://github.com/ferra
 
 ## 🏗️ Arquitetura e Estrutura do Projeto
 
-O projeto segue um padrão arquitetural em camadas estritas para separar responsabilidades e facilitar a manutenção e escalabilidade, conforme referenciado na estrutura do projeto (`Screenshot 2026-09-02 at 8.29.33 AM.png`).
+O projeto segue um padrão arquitetural em camadas estritas para separar responsabilidades e facilitar a manutenção e escalabilidade.
 
 ### Estrutura de Pacotes (`src/main/java/dw/editora`)
 
