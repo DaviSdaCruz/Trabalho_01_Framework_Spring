@@ -58,6 +58,7 @@ A API responde nos Base Path `/editora/api/artigos` e `/editora/api/autores` e p
 | `POST` | `/api/autores` | Cadastra um novo autor. |
 | `GET` | `/api/autores` | Lista todos os autores (aceita Query Param `?nome=` para busca parcial). |
 | `GET` | `/api/autores/{id}` | Retorna os detalhes de um autor específico pelo seu ID. |
+| `DELETE` | `/api/autores/{id}` | Exclui um autor específico pelo ID. |
 
 ## 💻 Como Executar o Projeto Localmente
 
