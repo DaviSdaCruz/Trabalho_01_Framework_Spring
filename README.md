@@ -4,7 +4,7 @@ Davi Szeremeta da Cruz, Lucas Emanuel Gavet Maichak e Vitor Eduardo Silva
 
 # 📚 Projeto Editora API (Spring Boot)
 
-Esta API permite cadastrar, consultar, atualizar e excluir produtos de uma editora. Criada para a obtenção de nota na matéria de Desenvolvimento Web
+Esta API permite cadastrar, consultar e excluir autores, além de cadastrar, consultar, atualizar e excluir artigos de uma editora. Desenvolvida como projeto acadêmico para obtenção de nota na disciplina de Desenvolvimento Web, com base neste projeto: https://github.com/ferrasa/dw (editora_aprimorado).
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -53,7 +53,6 @@ A API responde no Base Path `/editora/api/artigos` e `/editora/api/autores` e pe
 | `PUT` | `/api/artigos/{id}` | Atualiza completamente um artigo existente. |
 | `DELETE` | `/api/artigos/{id}` | Exclui um artigo específico pelo ID. |
 | `DELETE` | `/api/artigos` | Exclui **todos** os artigos do banco de dados. |
-
 | `POST` | `/api/autores` | Cadastra um novo autor. |
 | `GET` | `/api/autores` | Lista todos os autores (aceita Query Param `?nome=` para busca parcial). |
 | `GET` | `/api/autores/{id}` | Retorna os detalhes de um autor específico pelo seu ID. |
@@ -68,4 +67,4 @@ A API responde no Base Path `/editora/api/artigos` e `/editora/api/autores` e pe
     ```bash
     mvn spring-boot:run
     ```
-6. A API estará pronta para receber requisições em: `http://localhost:8000/editora/api/artigos`
+6. A API estará pronta para receber requisições em: `http://localhost:8000/editora/api/artigos` e `http://localhost:8000/editora/api/autores`
