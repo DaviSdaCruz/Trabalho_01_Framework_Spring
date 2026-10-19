@@ -53,13 +53,13 @@ public class ArtigoController {
     }
 
     @PostMapping
-    public ResponseEntity<Artigo> createArtigo(@RequestBody Artigo artigo) {
-        try {
-            Artigo artigoSalvo = service.salvar(artigo);
-            return ResponseEntity.status(HttpStatus.CREATED).body(artigoSalvo);
-        } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
-        }
+    public ResponseEntity<Artigo> createArtigo(
+            @RequestBody Artigo artigo) {
+
+        Artigo artigoSalvo = service.salvar(artigo);
+
+        return ResponseEntity
+                .status(HttpStatus.CREATED).body(artigoSalvo);
     }
 
     @PutMapping("/{id}")

@@ -3,6 +3,7 @@ package dw.editora.control;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -14,18 +15,41 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import dw.editora.entity.Artigo;
 import dw.editora.entity.Autor;
+import dw.editora.repository.ArtigoRepository;
+import dw.editora.repository.AutorRepository;
 import dw.editora.service.AutorService;
 
 @CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api/autores")
 public class AutorController {
+    
+    @Autowired
+    private AutorRepository autorRepository;
 
+    @Autowired
+    private ArtigoRepository artigoRepository;
+   
     private final AutorService service;
 
     public AutorController(AutorService service) {
         this.service = service;
+    }
+
+    @GetMapping("/{id}/artigos")
+    public ResponseEntity<List<Artigo>> listarArtigosPorAutor(
+            @PathVariable Long id) {
+
+        if (!autorRepository.existsById(id)) {
+            return ResponseEntity.notFound().build();
+        }
+
+        List<Artigo> artigos =
+                artigoRepository.findByAutorId(id);
+
+        return ResponseEntity.ok(artigos);
     }
 
     // Listar todos os autores

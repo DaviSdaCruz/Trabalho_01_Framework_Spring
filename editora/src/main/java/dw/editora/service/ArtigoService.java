@@ -3,15 +3,24 @@ package dw.editora.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import dw.editora.entity.Artigo;
+import dw.editora.entity.Autor;
 import dw.editora.repository.ArtigoRepository;
+import dw.editora.repository.AutorRepository;
 
 // @Service diz ao Spring que esta classe contém a lógica de negócio
 @Service
 public class ArtigoService {
 
+    @Autowired
+    private ArtigoRepository artigoRepository;
+
+    @Autowired
+    private AutorRepository autorRepository;
+   
     private final ArtigoRepository repository;
 
     public ArtigoService(ArtigoRepository repository) {
@@ -30,8 +39,16 @@ public class ArtigoService {
     }
 
     public Artigo salvar(Artigo artigo) {
-        // Regras de negócio, validações complexas ou envio de emails entrariam aqui
-        return repository.save(artigo);
+        Long autorId = artigo.getAutor().getId();
+
+        Autor autor = autorRepository.findById(autorId)
+            .orElseThrow(() ->
+                new RuntimeException("Autor não encontrado: " + autorId)
+            );
+
+        artigo.setAutor(autor);
+
+        return artigoRepository.save(artigo);
     }
 
     public Optional<Artigo> atualizar(Long id, Artigo artigoAtualizado) {
