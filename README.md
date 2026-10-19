@@ -1,6 +1,6 @@
 # Autores
 
-Davi Szeremeta da Cruz, Lucas Emanuel Gavet Maichak e Vitor Eduardo Silva
+Davi Szeremeta da Cruz, Lucas Emanuel Gavet Maichak, Vitor Eduardo Silva e Maria Clara Nascimento Candiotto
 
 # 📚 Projeto Editora API (Spring Boot)
 
